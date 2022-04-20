@@ -1,11 +1,10 @@
 <h1>My Watch Lists</h1>
-
+<h2><%= link_to 'Create a watch list', new_list_path %></h2>
 <ul>
 <% @lists.each do |list| %>
   <li style="list-style: none">
-    <%= list.name %>
+    <%= link_to "#{list.name}", list_path(list) %>
     <br>
-    <%# <%= image_tag list.poster_url, alt: "a poster", width: 200 %> %>
   </li>
 <% end %>
 </ul>

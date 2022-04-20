@@ -1,6 +1,11 @@
-<h1>Movies, but I think this should watch lists?</h1>
+<h1>My Watch Lists</h1>
+
 <ul>
-<% @movies.each do |movie| %>
-  <li><%= movie.title %></li>
+<% @lists.each do |list| %>
+  <li style="list-style: none">
+    <%= list.name %>
+    <br>
+    <%# <%= image_tag list.poster_url, alt: "a poster", width: 200 %> %>
+  </li>
 <% end %>
 </ul>

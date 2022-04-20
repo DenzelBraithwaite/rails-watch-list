@@ -1,14 +1,28 @@
 class ListsController < ApplicationController
   def index
-    @movies = Movie.all
+    @lists = List.all
   end
 
   def show
+    @list = List.find(params[:id])
   end
 
   def new
+    @list = List.new
   end
 
   def create
+    @list = List.new(strong_parms)
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def strong_parms
+    params.require(:list).permit(:name)
   end
 end

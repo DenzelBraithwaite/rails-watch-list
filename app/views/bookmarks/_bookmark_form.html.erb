@@ -1,0 +1,8 @@
+<%= simple_form_for([list, bookmark]) do |f| %>
+<%= f.input :comment, placeholder: 'Enter a short comment' %>
+<%= f.association :movie %>
+<%= f.association :list %>
+<%= f.submit %>
+<% end %>
+
+<%= link_to 'back', lists_path %>

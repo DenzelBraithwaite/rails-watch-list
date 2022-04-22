@@ -2,15 +2,6 @@ class BookmarksController < ApplicationController
   before_action :find_bookmark, only: :destroy
   before_action :find_list, only: [:new, :create]
 
-  def index
-    @list = List.find(params[:list_id])
-    @bookmarks = Bookmark.all
-  end
-
-  def show
-
-  end
-
   def new
     @bookmark = Bookmark.new
   end

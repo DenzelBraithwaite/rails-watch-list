@@ -1,6 +1,6 @@
 <%= simple_form_for(list) do |field| %>
 <%= field.input :name, placeholder: 'Enter list name' %>
-<%= field.submit %>
+<%= field.submit class: "btn btn-success"%>
 <% end %>
 
-<%= link_to 'back', lists_path %>
+<%= link_to 'back', root_path %>

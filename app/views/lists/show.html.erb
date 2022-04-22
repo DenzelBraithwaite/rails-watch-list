@@ -1,4 +1,4 @@
-<h1>Your watch list</h1>
+<h1><%= @list.name %></h1>
 <ul>
   <ul style="list-style: none"><% @list.bookmarks.each do |bookmark| %>
     <li>
@@ -15,5 +15,4 @@
   </ul>
   <p><%= link_to 'back', root_path %></p>
   <p><%= link_to 'Add a movie', new_list_bookmark_path(@list) %></p>
-
 </ul>

@@ -3,7 +3,7 @@
 <ul>
 <% @lists.each do |list| %>
   <li style="list-style: none">
-    <%= link_to "#{list.name}", list_bookmarks_path(list) %>
+    <%= link_to "#{list.name}", list_path(list) %>
     <br>
   </li>
 <% end %>

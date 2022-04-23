@@ -4,11 +4,11 @@
 <% @lists.each do |list| %>
   <li style="list-style: none">
     <%= link_to "#{list.name}", list_path(list) %>
-    <% if list.photo.key %>
+    <% if list.photo.attached? %>
       <%= cl_image_tag(list.photo.key, height: 300, width: 400, crop: :fill) %>
-      <% else %>
-        <%= cl_image_tag("https://res.cloudinary.com/watch-list-project/image/upload/v1650734365/Blank-Movie-Poster1_o23lyb.jpg", height: 300, width: 400, crop: :fill) %>
-      <% end %>
+    <% else %>
+      <%= image_tag "template_poster.jpg", alt: "Le Wagon", width: 200 %>
+    <% end %>
     <br>
   </li>
 <% end %>

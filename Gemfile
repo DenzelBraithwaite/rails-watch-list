@@ -11,8 +11,10 @@ gem "font-awesome-sass", "~> 5.15"
 gem "simple_form", github: "heartcombo/simple_form"
 # For my secret keys
 gem 'dotenv-rails', groups: [:development, :test]
+# storing user uploaded images
+gem 'cloudinary', '~> 1.16.0'
 
-# Adds Faker
+# Adds Faker to seed the database
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.5'

@@ -1,6 +1,7 @@
-<%= simple_form_for(list) do |field| %>
-<%= field.input :name, placeholder: 'Enter list name' %>
-<%= field.submit class: "btn btn-success"%>
+<%= simple_form_for(list) do |f| %>
+<%= f.input :name, placeholder: 'Enter list name' %>
+<%= f.input :photo, as: :file %>
+<%= f.submit class: "btn btn-success"%>
 <% end %>
 
 <%= link_to 'back', root_path %>

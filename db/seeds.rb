@@ -30,6 +30,8 @@ urls = [
 ]
 
 puts 'Doing some last minute cleaning...'
+Bookmark.destroy_all
+List.destroy_all
 Movie.destroy_all
 
 puts 'Baking some fresh new movies...'

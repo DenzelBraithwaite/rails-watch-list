@@ -4,7 +4,9 @@
 <% @lists.each do |list| %>
   <li style="list-style: none">
     <%= link_to "#{list.name}", list_path(list) %>
+    <%= cl_image_tag(list.photo.key, height: 300, width: 400, crop: :fill) %>
     <br>
   </li>
 <% end %>
-</ul>
+<!-- app/views/articles/index.html.erb -->
+<%# handle if user doesnèt want a photo %>

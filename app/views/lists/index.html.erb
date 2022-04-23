@@ -4,9 +4,14 @@
 <% @lists.each do |list| %>
   <li style="list-style: none">
     <%= link_to "#{list.name}", list_path(list) %>
-    <%= cl_image_tag(list.photo.key, height: 300, width: 400, crop: :fill) %>
+    <% if list.photo.key %>
+      <%= cl_image_tag(list.photo.key, height: 300, width: 400, crop: :fill) %>
+      <% else %>
+        <%= cl_image_tag("https://res.cloudinary.com/watch-list-project/image/upload/v1650734365/Blank-Movie-Poster1_o23lyb.jpg", height: 300, width: 400, crop: :fill) %>
+      <% end %>
     <br>
   </li>
 <% end %>
 <!-- app/views/articles/index.html.erb -->
-<%# handle if user doesnèt want a photo %>
+
+<%# handle if user doesn't want a photo %>

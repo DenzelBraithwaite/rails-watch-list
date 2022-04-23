@@ -3,10 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
 
-# Added from lecture
+# To help make css more compatible with other browsers
 gem "autoprefixer-rails", "10.2.5"
+# For cool fonts with scss
 gem "font-awesome-sass", "~> 5.15"
+# To generate qiuck forms with some bootstrap
 gem "simple_form", github: "heartcombo/simple_form"
+# For my secret keys
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Adds Faker
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'

@@ -1,4 +1,5 @@
-<h1 style="background-image: url('')"><%= @list.name %></h1>
+<h1><%= @list.name %></h1>
+<%= cl_image_tag(@list.photo.key, height: 300, width: 400, crop: :fill) %>
 <ul>
   <ul style="list-style: none"><% @list.bookmarks.each do |bookmark| %>
     <li>

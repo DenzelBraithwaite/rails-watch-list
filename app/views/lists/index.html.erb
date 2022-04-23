@@ -1,17 +1,3 @@
 <h1>My Watch Lists</h1>
 <h2><%= link_to 'Create a watch list', new_list_path %></h2>
 <ul>
-<% @lists.each do |list| %>
-  <li style="list-style: none">
-    <%= link_to "#{list.name}", list_path(list) %>
-    <% if list.photo.attached? %>
-      <%= cl_image_tag(list.photo.key, height: 300, width: 400, crop: :fill) %>
-    <% else %>
-      <%= image_tag "template_poster.jpg", alt: "Le Wagon", width: 200 %>
-    <% end %>
-    <br>
-  </li>
-<% end %>
-<!-- app/views/articles/index.html.erb -->
-
-<%# handle if user doesn't want a photo %>
